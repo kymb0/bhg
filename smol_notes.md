@@ -1,6 +1,22 @@
-# just smol things
+# just smol go things
 _reduce bloat in your binary:_
   * `$ go build -ldflags "-w -s"`
+
+_interrogate documentation for package,
+function, method, or variable:_
+  * `$ go doc fmt.Println`
+
+_pip equivalent for go:_
+  * `$ go get github.com/stacktitan/ldapauth`
+  
+_format your code!!!:_
+  * `$ go fmt /path/to/your/package`
+  
+_vet your code!!!:_
+  * `$ go vet /path/to/your/package`
+
+_go playground:_
+  * ```Go Playground is an execution environment hosted at https://play.golang.org/ that provides a web-based frontend for developers to quickly develop,test, execute, and share snippets of Go code```
 
 _Cross compilation:_
 ```
