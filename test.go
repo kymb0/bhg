@@ -1,30 +1,31 @@
 package main
 
 import (
-    "fmt"
-    "os"
-	"string"
-    
-    "github.com/manifoldco/promptui"
+	"errors"
+	"fmt"
+	"os"
+	"strings"
+
+	"github.com/manifoldco/promptui"
 )
 
+//			if input.Contains("\\\\") != 1 {
 func main() {
 	prompt := promptui.Prompt{
 		Label: "Where should we send tha l00tz? (UNC path of your SMB server EG \\\\10.13.3.7\\\\GUEST): ",
 		Validate: func(input string) error {
-			if input.Contains("\\\\") != 1 {
-				return errors.New("Search term must have at least 3 characters")
+			if strings.Contains(input, "\\\\") == false {
+				return errors.New("Are you SURE that's a UNC path???")
 			}
 			return nil
 		},
 	}
-    }
-    
-    keyword, err := prompt.Run()
-    if err != nil {
-        fmt.Println(err)
-        os.Exit(1)
-    }
-    
-    fmt.Printf("Search for %q\n", keyword)
+
+	keyword, err := prompt.Run()
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	fmt.Printf("Search for %q\n", keyword)
 }
