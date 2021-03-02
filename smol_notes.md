@@ -8,6 +8,7 @@ function, method, or variable:_
 
 _pip equivalent for go:_
   * `$ go get github.com/stacktitan/ldapauth`
+  * ### `go` get requires git if any of the packages lives (and is being fetched) from a git repository!!!
   
 _format your code!!!:_
   * `$ go fmt /path/to/your/package`
