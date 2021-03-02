@@ -75,5 +75,9 @@ func main() {
     }   else {
 		fmt.Println("[*] Exfiltration succesfull!")
 	}
+	
+	//will remove the C:\dump_temp dir afterwards
+	//will also add code to grab the privesc check module from powerup and run it aswell as send it back
+	//future plans are to have a menu with options to send back shell, plant backdoor, create users etc
 
 }
